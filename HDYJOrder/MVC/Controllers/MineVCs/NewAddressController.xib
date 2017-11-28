@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewAddressController">
+            <connections>
+                <outlet property="myTableView" destination="KKn-vx-VUG" id="Uxn-ep-Egn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KKn-vx-VUG">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <view key="tableFooterView" contentMode="scaleToFill" id="X7e-Y2-K6n">
+                        <rect key="frame" x="0.0" y="828" width="375" height="101"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE8-EH-MFZ" customClass="BaseXIBButton">
+                                <rect key="frame" x="25" y="30" width="325" height="41"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.6588235294" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="T6l-Y8-9Xi"/>
+                                </constraints>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveAddressAction:" destination="-1" eventType="touchUpInside" id="Qv5-iG-ySm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kE8-EH-MFZ" firstAttribute="centerY" secondItem="X7e-Y2-K6n" secondAttribute="centerY" id="Egr-3f-ZDM"/>
+                            <constraint firstAttribute="trailing" secondItem="kE8-EH-MFZ" secondAttribute="trailing" constant="25" id="Hxc-2e-C6D"/>
+                            <constraint firstItem="kE8-EH-MFZ" firstAttribute="leading" secondItem="X7e-Y2-K6n" secondAttribute="leading" constant="25" id="tds-Jp-wQY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="y7v-Mx-LG5"/>
+                        <outlet property="delegate" destination="-1" id="fWh-86-Nnm"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="KKn-vx-VUG" secondAttribute="bottom" id="A7O-qo-A0v"/>
+                <constraint firstAttribute="trailing" secondItem="KKn-vx-VUG" secondAttribute="trailing" id="DvI-91-ufu"/>
+                <constraint firstItem="KKn-vx-VUG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IOn-di-Ca4"/>
+                <constraint firstItem="KKn-vx-VUG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cXh-Fy-rU2"/>
+            </constraints>
+            <point key="canvasLocation" x="-522" y="-49"/>
+        </view>
+    </objects>
+</document>

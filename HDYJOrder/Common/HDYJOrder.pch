@@ -1,0 +1,47 @@
+//
+//  HDYJOrder.pch
+//  HDYJOrder
+//
+//  Created by libertyAir on 2017/11/13.
+//  Copyright © 2017年 gwl. All rights reserved.
+//
+
+#ifndef HDYJOrder_pch
+#define HDYJOrder_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//size
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define WeakSelf(type)  __weak typeof(type) weak##type = type;
+#define StrongSelf(type)  __strong typeof(type) type = weak##type;
+
+//Common
+#import "UIView+Common.h"
+#import "LANetworking.h"
+#import "UIView+Toast.h"
+#import "Common.h"
+#import "NSString+Extension.h"
+#import "BaseTabbarController.h"
+
+//Third SDK
+#import "MJExtension.h"
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+#import "SDAutoLayout.h"
+#import "MBProgressHUD.h"
+#import "UIScrollView+EmptyDataSet.h"
+
+//color
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define NAVI_COLOR RGBCOLOR(28,168,253)
+
+//font
+#define kFONT_COLOR_1 RGBCOLOR(40, 40, 40)
+
+
+#endif /* HDYJOrder_pch */

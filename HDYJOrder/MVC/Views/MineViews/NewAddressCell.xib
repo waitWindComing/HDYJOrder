@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newAddress_cell" id="KGk-i7-Jjw" customClass="NewAddressCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-j5-Dv2">
+                        <rect key="frame" x="10" y="0.0" width="300" height="43.5"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="MfB-tj-Jbr"/>
+                        </connections>
+                    </textField>
+                    <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ab-kq-GxE">
+                        <rect key="frame" x="10" y="0.0" width="300" height="43.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PHH-Zj-5x0" customClass="BaseXIBTextView">
+                        <rect key="frame" x="9" y="0.0" width="302" height="43.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="placholder" value="详情"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                <color key="value" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFont">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="9Sf-Ho-9UE"/>
+                        </connections>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PHH-Zj-5x0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6ii-DU-OOP"/>
+                    <constraint firstItem="PHH-Zj-5x0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="7TY-TH-flQ"/>
+                    <constraint firstItem="fgN-j5-Dv2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AFt-9h-gke"/>
+                    <constraint firstAttribute="bottom" secondItem="PHH-Zj-5x0" secondAttribute="bottom" id="GFH-oQ-0xV"/>
+                    <constraint firstAttribute="trailing" secondItem="fgN-j5-Dv2" secondAttribute="trailing" constant="10" id="SWw-c3-XYG"/>
+                    <constraint firstItem="6Ab-kq-GxE" firstAttribute="bottom" secondItem="fgN-j5-Dv2" secondAttribute="bottom" id="awb-PY-cs7"/>
+                    <constraint firstItem="6Ab-kq-GxE" firstAttribute="top" secondItem="fgN-j5-Dv2" secondAttribute="top" id="dnl-VV-H1p"/>
+                    <constraint firstAttribute="trailing" secondItem="PHH-Zj-5x0" secondAttribute="trailing" constant="9" id="fS6-so-2xM"/>
+                    <constraint firstItem="fgN-j5-Dv2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="gA1-47-MO1"/>
+                    <constraint firstItem="6Ab-kq-GxE" firstAttribute="trailing" secondItem="fgN-j5-Dv2" secondAttribute="trailing" id="kil-9o-8aN"/>
+                    <constraint firstItem="6Ab-kq-GxE" firstAttribute="leading" secondItem="fgN-j5-Dv2" secondAttribute="leading" id="pHa-ri-NED"/>
+                    <constraint firstAttribute="bottom" secondItem="fgN-j5-Dv2" secondAttribute="bottom" id="ygu-Gq-WKf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="contentField" destination="fgN-j5-Dv2" id="M2a-jr-hHV"/>
+                <outlet property="contentLabel" destination="6Ab-kq-GxE" id="adi-cZ-m1z"/>
+                <outlet property="textView" destination="PHH-Zj-5x0" id="Wq0-ST-5fn"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
