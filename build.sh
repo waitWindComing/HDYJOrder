@@ -1,7 +1,7 @@
 # 工程名
 APP_NAME="HDYJOrder"
 # 证书
-#CODE_SIGN_DISTRIBUTION="iPhone Distribution: Shanghai ******* Co., Ltd."
+CODE_SIGN_DISTRIBUTION="iPhone Distribution: liu yiran (NDN26Z77AT)"
 # info.plist路径
 project_infoplist_path="./${APP_NAME}/Info.plist"
 
