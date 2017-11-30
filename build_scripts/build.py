@@ -27,7 +27,7 @@ def parse_args():
                         default is iphonesimulator")
     parser.add_argument("--build_version", dest="build_version", default='1.0.0.1',
                         help="Specify build version number")
-    parser.add_argument("--provisioning_profile", dest="provisioning_profile", default=None,
+    parser.add_argument("--provisioning_profile", dest="provisioning_profile", default='allpro.mobileprovision',
                         help="specify provisioning profile")
     parser.add_argument("--plist_path", dest="plist_path", default=None,
                         help="Specify build plist path")
